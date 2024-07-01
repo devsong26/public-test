@@ -30,4 +30,21 @@ class StringUtilTest {
         assertTrue(StringUtil.isEmpty("              "));
     }
 
+    // 기능 2. 유효한 텍스트인지 확인해보기 StringUtils.hasText
+
+    @Test
+    void 입력이_null이면_false를_반환한다(){
+        assertFalse(StringUtil.hasText(null));
+    }
+
+    @Test
+    void 빈_문자열이면_false를_반환(){
+        assertFalse(StringUtil.hasText(" "));
+    }
+
+    @Test
+    void 문자열에_유효한_문자가_하나라도_있으면_true(){
+        assertTrue(StringUtil.hasText("8d"));
+    }
+
 }
